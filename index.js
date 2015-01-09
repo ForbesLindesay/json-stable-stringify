@@ -1,5 +1,3 @@
-var json = typeof JSON !== 'undefined' ? JSON : require('jsonify');
-
 module.exports = function (obj, opts) {
     if (!opts) opts = {};
     if (typeof opts === 'function') opts = { cmp: opts };
@@ -33,19 +31,19 @@ module.exports = function (obj, opts) {
             return;
         }
         if (typeof node !== 'object' || node === null) {
-            return json.stringify(node);
+            return JSON.stringify(node);
         }
         if (isArray(node)) {
             var out = [];
             for (var i = 0; i < node.length; i++) {
-                var item = stringify(node, i, node[i], level+1) || json.stringify(null);
+                var item = stringify(node, i, node[i], level+1) || JSON.stringify(null);
                 out.push(indent + space + item);
             }
             return '[' + out.join(',') + indent + ']';
         }
         else {
             if (seen.indexOf(node) !== -1) {
-                if (cycles) return json.stringify('__cycle__');
+                if (cycles) return JSON.stringify('__cycle__');
                 throw new TypeError('Converting circular structure to JSON');
             }
             else seen.push(node);
@@ -58,7 +56,7 @@ module.exports = function (obj, opts) {
 
                 if(!value) continue;
 
-                var keyValue = json.stringify(key)
+                var keyValue = JSON.stringify(key)
                     + colonSeparator
                     + value;
                 ;
