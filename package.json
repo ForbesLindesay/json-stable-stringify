@@ -1,5 +1,5 @@
 {
-  "name": "json-stable-stringify",
+  "name": "stable-stringify",
   "version": "1.0.0",
   "description": "deterministic JSON.stringify() with custom sorting to get deterministic hashes from stringified results",
   "main": "index.js",
@@ -22,9 +22,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/substack/json-stable-stringify.git"
+    "url": "git://github.com/ForbesLindesay/json-stable-stringify.git"
   },
-  "homepage": "https://github.com/substack/json-stable-stringify",
+  "homepage": "https://github.com/ForbesLindesay/json-stable-stringify",
   "keywords": [
     "json",
     "stringify",
