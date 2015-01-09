@@ -117,6 +117,10 @@ The replacer parameter is a function `opts.replacer(key, value)` that behaves
 the same as the replacer
 [from the core JSON object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_native_JSON#The_replacer_parameter).
 
+### stringify
+
+Defaults to `JSON.stringify`.  This is the function that is used to stringify the individual atoms (Strings, Keys, Numbers etc.)
+
 # install
 
 With [npm](https://npmjs.org) do:
