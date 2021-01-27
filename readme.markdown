@@ -1,3 +1,7 @@
+> # Deprecated
+>
+> Please use https://github.com/epoberezkin/fast-json-stable-stringify
+
 # stable-stringify
 
 deterministic version of `JSON.stringify()` so you can get a consistent hash
